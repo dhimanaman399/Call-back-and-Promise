@@ -1,0 +1,64 @@
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is 'sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show();
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1447:7 Uncaught SyntaxError: missing ) after argument list
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is ',sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show();
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1480:2 start
+VM1480:12 end
+VM1480:16 promise is Promise {<pending>}
+Promise {<pending>}
+VM1480:7 Total is  NaN
+VM1480:17 answr is NaN
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is ',sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1492:2 start
+VM1492:12 end
+VM1492:16 promise is Promise {<pending>}
+Promise {<pending>}
+VM1492:7 Total is  250
+VM1492:17 answr is 250

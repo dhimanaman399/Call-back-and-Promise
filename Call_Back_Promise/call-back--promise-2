@@ -1,0 +1,213 @@
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is 'sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show();
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1447:7 Uncaught SyntaxError: missing ) after argument list
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is ',sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show();
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1480:2 start
+VM1480:12 end
+VM1480:16 promise is Promise {<pending>}
+Promise {<pending>}
+VM1480:7 Total is  NaN
+VM1480:17 answr is NaN
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum = add* fn/2;
+console.log('Total is ',sum);
+resolve(sum);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1492:2 start
+VM1492:12 end
+VM1492:16 promise is Promise {<pending>}
+Promise {<pending>}
+VM1492:7 Total is  250
+VM1492:17 answr is 250
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum > 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1699:2 start
+VM1699:13 end
+VM1699:17 promise is Promise {<pending>}
+Promise {<pending>}
+VM1699:8 Total is  its a big number
+VM1699:18 answr is its a big number
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum < 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(sum);
+reject(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1752:2 start
+VM1752:14 end
+VM1752:18 promise is Promise {<pending>}
+Promise {<pending>}
+VM1752:8 Total is  hah so small number
+VM1752:19 answr is 250
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum >= 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(sum);
+reject(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1763:2 start
+VM1763:14 end
+VM1763:18 promise is Promise {<pending>}
+Promise {<pending>}
+VM1763:8 Total is  its a big number
+VM1763:19 answr is 250
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum >= 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(check);
+reject(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1778:2 start
+VM1778:14 end
+VM1778:18 promise is Promise {<pending>}
+Promise {<pending>}
+VM1778:8 Total is  its a big number
+VM1778:19 answr is its a big number
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum > 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(check);
+reject(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('answr is wrong',data));
+VM1785:2 start
+VM1785:14 end
+VM1785:18 promise is Promise {<pending>}
+Promise {<pending>}
+VM1785:8 Total is  its a big number
+VM1785:19 answr is its a big number
+function show(fn){
+console.log('start');
+var p = new Promise((resolve,reject)=>{
+setTimeout(function(){
+var add = 50;
+var sum =  add* fn/2;
+var check = sum < 80 ?"its a big number":"hah so small number"; 
+console.log('Total is ',check);
+resolve(check);
+reject(check);
+
+},7000);
+});
+console.log('end');
+return p;
+}
+var promise = show(10);
+console.log('promise is', promise);
+promise.then(data=> console.log('answr is',data)).catch(data=>console.log('  wrong answr'));
+VM1805:2 start
+VM1805:14 end
+VM1805:18 promise is Promise {<pending>}
+Promise {<pending>}
+VM1805:8 Total is  hah so small number
+VM1805:19 answr is hah so small number
